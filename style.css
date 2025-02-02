@@ -1,0 +1,149 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #74ABE2, #5563DE);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Quiz Container */
+.quiz-container {
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+
+/* Timer */
+#timer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ddd4d4;
+  background-color: #b60808;
+  width: 200px;
+  height: 50px;
+  padding-top: 12px;
+  border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+  #timer {
+    position: fixed;
+    font-size: 14px; 
+    right: 0px;        /* Smaller font size */
+    width: 100px;            /* Smaller width */
+    height: 40px;            /* Smaller height */
+    padding-top: 2px;        /* Adjust padding */
+  }
+}
+
+/* Headings */
+h1, h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Question Number */
+#question-number {
+  margin-bottom: 10px;
+  color: #555;
+  font-weight: 600;
+}
+
+/* Option Instruction */
+.option-instruction {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Options Grid */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+/* Buttons */
+button {
+  background: #5563DE;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #4554c4;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Option Buttons */
+.option {
+  background: #f1f1f1;
+  color: #333;
+  padding: 12px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  border: 2px solid transparent;
+  text-align: left;
+}
+
+.option:hover {
+  background: #e0e0e0;
+  transform: translateX(5px);
+}
+
+/* Correct and Wrong Answer Feedback */
+.correct {
+  background: #2ecc71 !important;
+  border-color: #27ae60;
+  color: #fff;
+}
+
+.wrong {
+  background: #e74c3c !important;
+  border-color: #c0392b;
+  color: #fff;
+}
+
+/* Hidden Class */
+.hidden {
+  display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
